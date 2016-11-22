@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ObraSocialNegocio
 {
-    public class Class1
+    class Configuracion
     {
+        public static String STRING_DE_CONEXION = "";
     }
 }
