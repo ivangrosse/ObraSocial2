@@ -110,6 +110,7 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Vista\AltaMedico.aspx" />
     <Content Include="Vista\ConsultarMedico.aspx" />
+    <Content Include="Vista\Index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +128,13 @@
     </Compile>
     <Compile Include="Vista\ConsultarMedico.aspx.designer.cs">
       <DependentUpon>ConsultarMedico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

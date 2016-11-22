@@ -28,7 +28,7 @@
                 <td>&nbsp;</td>
             </tr>
         </table>
-        
     </div>
+    <a href="Index.aspx">Volver al inicio.</a>
 </body>
 </html>
