@@ -9,7 +9,7 @@
 </head>
 <body>
     <div>
-        <h1>Listado de médicos.</h1>
+        <h1>Listado de médicos</h1>
     </div>
     <hr />
     <div>
