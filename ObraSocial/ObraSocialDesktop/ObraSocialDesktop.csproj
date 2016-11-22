@@ -54,6 +54,12 @@
     <Compile Include="Vista\GestionarAfiliado.Designer.cs">
       <DependentUpon>GestionarAfiliado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -65,6 +71,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\GestionarAfiliado.resx">
       <DependentUpon>GestionarAfiliado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
