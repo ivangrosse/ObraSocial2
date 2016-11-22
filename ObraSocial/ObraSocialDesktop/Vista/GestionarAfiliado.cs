@@ -26,5 +26,12 @@ namespace ObraSocialDesktop.Vista
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AgregarAfiliado agregarAfiliado = new AgregarAfiliado();
+            agregarAfiliado.Show();
+
+        }
     }
 }
