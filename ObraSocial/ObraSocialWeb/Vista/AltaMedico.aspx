@@ -35,5 +35,6 @@
 
         </p>
     </form>
+    <a href="Index.aspx">Volver al inicio.</a>
 </body>
 </html>
