@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADO\AfiliadoADO.cs" />
+    <Compile Include="ADO\MedicoADO.cs" />
     <Compile Include="Configuracion.cs" />
     <Compile Include="Modelo\Afiliado.cs" />
     <Compile Include="Modelo\Consulta.cs" />
