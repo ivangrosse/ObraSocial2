@@ -34,8 +34,8 @@ namespace ObraSocialNegocio.ADO
 
         public static Afiliado buscarAfiliado(int nroAfiliado)
         {
-            Afiliado a = new Afiliado();
-            String connectionString = Configuracion.STRING_DE_CONEXION_IVAN;
+            Afiliado a = null;
+            String connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\lucaf\\Documents\\ObraSocial.mdf;Integrated Security=True;Connect Timeout=30";
             SqlConnection conn = new SqlConnection(connectionString);
             try
             {
@@ -47,6 +47,7 @@ namespace ObraSocialNegocio.ADO
                 {
                     while (read.Read())
                     {
+                        a = new Afiliado();
                         a.Dni = Int32.Parse(read.GetValue(1).ToString());
                         a.Nombre = read.GetSqlValue(2).ToString();
                         a.Apellido = read.GetValue(3).ToString();
