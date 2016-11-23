@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Services;
 
-namespace ObraSocialWeb.WebService
+namespace ObraSocialWeb_2
 {
     /// <summary>
     /// Summary description for ObraSocialWebService
@@ -17,23 +17,18 @@ namespace ObraSocialWeb.WebService
     // [System.Web.Script.Services.ScriptService]
     public class ObraSocialWebService : System.Web.Services.WebService
     {
+
         [WebMethod]
         public string validarAfiliado(int nroAfiliado)
         {
 
             Afiliado afiliado = new Afiliado();
             afiliado = ObraSocialNegocio.ADO.AfiliadoADO.buscarAfiliado(nroAfiliado);
-            if(afiliado == null)
+            if (afiliado == null)
             {
                 return "No se encontro el afiliado";
             }
-            return afiliado.Nombre +" "+ afiliado.Apellido + " es afiliado";
-        }
-
-        [WebMethod]
-        public string HelloWorld2()
-        {
-            return "Hello World 2";
+            return afiliado.Nombre + " " + afiliado.Apellido + " es afiliado";
         }
     }
 }
