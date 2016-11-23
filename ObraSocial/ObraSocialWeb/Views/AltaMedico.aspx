@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
     <div>
         <label>Nombre:</label>
-        <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox></br></br>
+        <asp:TextBox ID="txtNombre" runat="server" OnTextChanged="txtNombre_TextChanged"></asp:TextBox></br></br>
         <label>Apellido:</label>
         <asp:TextBox ID="txtApellido" runat="server"></asp:TextBox></br></br>
         <label>DNI:</label>
@@ -23,15 +23,13 @@
         <asp:TextBox ID="txtCuenta" runat="server"></asp:TextBox></br></br>
         <label>Especialidad:</label>
         <asp:TextBox ID="txtEspecialidad" runat="server"></asp:TextBox></br></br>
-        <label>Fecha de nacimiento:</label>
-        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
     </div>
     <div>
 
     </div>
         <p>
 
-        <asp:Button ID="btnAltaMedico" runat="server" Text="Suscribir Médico" />
+        <asp:Button ID="btnAltaMedico" runat="server" Text="Suscribir Médico" OnClick="btnAltaMedico_Click" />
 
         </p>
     </form>
