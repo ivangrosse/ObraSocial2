@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ObraSocialWeb.Vista {
+namespace ObraSocialWeb_2.Views {
     
     
-    public partial class WebForm1 {
+    public partial class AltaMedico {
         
         /// <summary>
         /// Control form1.

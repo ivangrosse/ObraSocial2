@@ -1,5 +1,5 @@
-﻿using ObraSocialNegocio.Modelo;
-using ObraSocialWeb.Controllers;
+﻿using ObraSocialNegocio.ADO;
+using ObraSocialNegocio.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,23 +7,19 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ObraSocialWeb.Vista
+namespace ObraSocialWeb_2.Views
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class AltaMedico : System.Web.UI.Page
     {
-        MedicController controlador = new MedicController();
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void txtNombre_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         protected void btnAltaMedico_Click(object sender, EventArgs e)
         {
+
+
             Medico medico = new Medico();
             Cuenta cuenta = new Cuenta();
 
@@ -41,7 +37,8 @@ namespace ObraSocialWeb.Vista
             medico.Especialidad.Descripcion = especialidad.Descripcion;
             medico.Direccion = txtDireccion.Text;
 
-            controlador.AltaMedico(medico, cuenta);
+            MedicoADO.altaMedico(medico, cuenta);
+            
         }
     }
 }
