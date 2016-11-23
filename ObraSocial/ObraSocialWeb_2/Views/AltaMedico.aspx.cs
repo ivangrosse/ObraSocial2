@@ -33,12 +33,24 @@ namespace ObraSocialWeb_2.Views
             medico.Apellido = txtApellido.Text;
             medico.Dni = Int32.Parse(txtDni.Text);
             medico.Matricula = Int32.Parse(txtMatricula.Text);
-            medico.Cuenta.Numero = cuenta.Numero;
-            medico.Especialidad.Descripcion = especialidad.Descripcion;
+            medico.Cuenta = cuenta;
+            medico.Especialidad = especialidad;
             medico.Direccion = txtDireccion.Text;
 
-            MedicoADO.altaMedico(medico, cuenta);
-            
+            try
+            {
+                MedicoADO.altaMedico(medico, cuenta);
+            } catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+                txtArea.Text = ex.Message;
+                
+            }
+        }
+
+        protected void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

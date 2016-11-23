@@ -14,35 +14,64 @@ namespace ObraSocialNegocio.ADO
        
         public static void altaMedico(Medico medico, Cuenta cuenta) { 
             SqlConnection conn = new SqlConnection(connectionString);
-            int id_cuenta = 0, id_especialidad = 0;
+            int id_cuenta = 1, id_especialidad = 1, bandera = 1;
+
             try
             {
                 conn.Open();
             }
             catch(Exception e)
             {
-                Console.WriteLine(e);
+                throw new Exception("error en abrir conexion: " + e.Message);
             }
 
-            String insertarCuenta = "INSERT INTO CUENTA VALUES('" + cuenta.Banco + "', '" + cuenta.Numero + "')";
-            SqlCommand cmd = new SqlCommand(insertarCuenta, conn);
+            SqlCommand cmd = new SqlCommand("", conn);
+            cmd.CommandText = "SELECT * FROM CUENTA";
+            SqlDataReader read = cmd.ExecuteReader();
+            try
+            {
+                if (read.HasRows)
+                {
+                    while (read.Read())
+                    {
+                        if (read.GetSqlValue(1).ToString().Equals(cuenta.Banco) && Int32.Parse(read.GetSqlValue(2).ToString()) == cuenta.Numero)
+                        {
+                            bandera = 0;
+                            break;
+                        }
+                        
+                    }
+                }
+                read.Close();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("error en abrir conexion: " + e.Message);
+            }
+            if(bandera == 1) { 
+                String insertarCuenta = "INSERT INTO CUENTA VALUES('" + cuenta.Banco + "', " + cuenta.Numero + ")";
+                cmd.CommandText = insertarCuenta;
+            }
+
             try { 
                 cmd.ExecuteNonQuery();
             }catch(SqlException e)
             {
-                Console.WriteLine(e);
+                throw new Exception("error en abrir conexion: " + e.Message);
             }
+            conn.Close();
+            conn.Open();
 
-            cmd.CommandText = "SELECT * FROM CUENTA WHERE CUENTA.numero = " + cuenta.Numero;
+            cmd.CommandText = "SELECT * FROM CUENTA";
 
-            SqlDataReader read = cmd.ExecuteReader();
+            read = cmd.ExecuteReader();
             try
             {   
                 if (read.HasRows)
                 {
                     while (read.Read())
                     {
-                        if( String.ReferenceEquals(read.GetSqlValue(1), cuenta.Banco) && Int32.Parse(read.GetSqlValue(2).ToString()) == cuenta.Numero)
+                        if( read.GetSqlValue(1).ToString().Equals(cuenta.Banco) && Int32.Parse(read.GetSqlValue(2).ToString()) == cuenta.Numero)
                         {
                             id_cuenta = Int32.Parse(read.GetSqlValue(0).ToString());
                         }
@@ -52,7 +81,7 @@ namespace ObraSocialNegocio.ADO
             }
             catch(Exception e)
             {
-                Console.WriteLine(e);
+                throw new Exception("error en abrir conexion: " + e.Message);
             }
                 
 
@@ -65,7 +94,7 @@ namespace ObraSocialNegocio.ADO
                 {
                     while (read.Read())
                     {
-                        if(String.ReferenceEquals(read.GetSqlValue(1), medico.Especialidad)){
+                        if(read.GetSqlValue(1).ToString().Equals(medico.Especialidad.Descripcion)){
                             id_especialidad = Int32.Parse(read.GetSqlValue(0).ToString());
                         }
                     }
@@ -74,22 +103,20 @@ namespace ObraSocialNegocio.ADO
             }
             catch(Exception e)
             {
-                Console.WriteLine(e);
+                throw new Exception("error en abrir conexion: " + e.Message);
             }
 
-            cmd.CommandText = "INSERT INTO MEDICO (nombre, dni, direccion, id_especialidad, id_cuenta) VALUES (@nombre, @dni, @direccion, @id_especialidad, @id_cuenta)";
-            cmd.Parameters.AddWithValue("@nombre", medico.Nombre + medico.Apellido);
-            cmd.Parameters.AddWithValue("@dni", medico.Dni);
-            cmd.Parameters.AddWithValue("@direccion", medico.Direccion);
-            cmd.Parameters.AddWithValue("@id_especialidad", id_especialidad);
-            cmd.Parameters.AddWithValue("@id_cuenta", id_cuenta);
+
+            String query = "INSERT INTO MEDICO(nombre, dni, direccion, id_especialidad, id_cuenta) VALUES ('" + medico.Nombre + " " + medico.Apellido + "', " + medico.Dni + ", '" + medico.Direccion + "', " + id_especialidad + "," + id_cuenta + ")";
+            cmd.CommandText = query;
+            
 
             try
             {
                 cmd.ExecuteNonQuery();
             }catch(SqlException e)
             {
-                Console.WriteLine(e);
+                throw new Exception("error en abrir conexion: " + e.Message + cmd.CommandText);
             }
             conn.Close();
         }

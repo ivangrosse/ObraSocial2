@@ -6,6 +6,12 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        #TextArea1 {
+            height: 60px;
+            width: 284px;
+        }
+    </style>
 </head>
 <body>
     <h1>Suscripción de Médico.</h1>
@@ -26,12 +32,19 @@
         <label>Especialidad:</label>
         <asp:TextBox ID="txtEspecialidad" runat="server"></asp:TextBox></br></br>
         <label>Direccion:</label>
-        <asp:TextBox ID="txtDireccion" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtDireccion" runat="server" OnTextChanged="txtDireccion_TextChanged"></asp:TextBox>
     </div>
         <p>
         <asp:Button ID="btnAltaMedico" runat="server" Text="Suscribir Médico" OnClick="btnAltaMedico_Click" />
         </p>
+        <asp:TextBox ID="txtArea" runat="server" OnTextChanged="txtDireccion_TextChanged"></asp:TextBox>
     </form>
     <a href="Default.aspx">Volver al inicio.</a>
+
+    
+
+    
+
+
 </body>
 </html>
