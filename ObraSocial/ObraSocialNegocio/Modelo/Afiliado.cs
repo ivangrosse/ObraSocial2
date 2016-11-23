@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObraSocialNegocio.Modelo
 {
-    class Afiliado
+    public class Afiliado
     {
         private int numero;
         private int dni;

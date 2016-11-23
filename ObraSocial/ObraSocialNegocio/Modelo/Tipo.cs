@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObraSocialNegocio.Modelo
 {
-    class Tipo
+    public class Tipo
     {
         private String descripcion;
         private double precio;

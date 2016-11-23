@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObraSocialNegocio.Modelo
 {
-    class Especialidad
+    public class Especialidad
     {
         private String descripcion;
 

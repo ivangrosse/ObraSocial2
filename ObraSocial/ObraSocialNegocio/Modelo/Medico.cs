@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObraSocialNegocio.Modelo
 {
-    class Medico
+    public class Medico
     {
         private int matricula;
         private String nombre;

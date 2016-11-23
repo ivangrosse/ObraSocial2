@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObraSocialNegocio.Modelo
 {
-    class Cuenta
+    public class Cuenta
     {
         private int numero;
         private String banco;
