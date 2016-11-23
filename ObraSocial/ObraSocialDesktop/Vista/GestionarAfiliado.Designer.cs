@@ -34,16 +34,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataSetAfiliados = new ObraSocialDesktop.DataSetAfiliados();
-            this.aFILIADOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aFILIADOTableAdapter = new ObraSocialDesktop.DataSetAfiliadosTableAdapters.AFILIADOTableAdapter();
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aFILIADOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetAfiliados = new ObraSocialDesktop.DataSetAfiliados();
+            this.aFILIADOTableAdapter = new ObraSocialDesktop.DataSetAfiliadosTableAdapters.AFILIADOTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetAfiliados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFILIADOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetAfiliados)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -100,20 +100,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(469, 187);
             this.dataGridView1.TabIndex = 6;
             // 
-            // dataSetAfiliados
-            // 
-            this.dataSetAfiliados.DataSetName = "DataSetAfiliados";
-            this.dataSetAfiliados.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // aFILIADOBindingSource
-            // 
-            this.aFILIADOBindingSource.DataMember = "AFILIADO";
-            this.aFILIADOBindingSource.DataSource = this.dataSetAfiliados;
-            // 
-            // aFILIADOTableAdapter
-            // 
-            this.aFILIADOTableAdapter.ClearBeforeFill = true;
-            // 
             // numeroDataGridViewTextBoxColumn
             // 
             this.numeroDataGridViewTextBoxColumn.DataPropertyName = "numero";
@@ -139,6 +125,20 @@
             this.apellidoDataGridViewTextBoxColumn.HeaderText = "apellido";
             this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
             // 
+            // aFILIADOBindingSource
+            // 
+            this.aFILIADOBindingSource.DataMember = "AFILIADO";
+            this.aFILIADOBindingSource.DataSource = this.dataSetAfiliados;
+            // 
+            // dataSetAfiliados
+            // 
+            this.dataSetAfiliados.DataSetName = "DataSetAfiliados";
+            this.dataSetAfiliados.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // aFILIADOTableAdapter
+            // 
+            this.aFILIADOTableAdapter.ClearBeforeFill = true;
+            // 
             // GestionarAfiliado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,8 +153,8 @@
             this.Text = "GestionarAfiliado";
             this.Load += new System.EventHandler(this.GestionarAfiliado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetAfiliados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFILIADOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetAfiliados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

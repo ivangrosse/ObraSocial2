@@ -145,7 +145,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controlador\" />
     <Folder Include="Modelo\" />
   </ItemGroup>
   <ItemGroup>
@@ -159,6 +158,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObraSocialNegocio\ObraSocialNegocio.csproj">
+      <Project>{7fed0451-2375-4b1a-8dcd-42ab213bebdb}</Project>
+      <Name>ObraSocialNegocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

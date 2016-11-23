@@ -12,6 +12,7 @@ namespace ObraSocialDesktop.Vista
 {
     public partial class GestionarAfiliado : Form
     {
+        
         public GestionarAfiliado()
         {
             InitializeComponent();
@@ -31,8 +32,9 @@ namespace ObraSocialDesktop.Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AgregarAfiliado agregarAfiliado = new AgregarAfiliado();
-            agregarAfiliado.Show();
+
+            AgregarAfiliado ventana = new AgregarAfiliado();
+            ventana.Show();
 
         }
 

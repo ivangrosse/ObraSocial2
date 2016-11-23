@@ -10,9 +10,9 @@ namespace ObraSocialNegocio.ADO
 {
     public class AfiliadoADO
     {
-        public void altaAfiliado(Afiliado afiliado) { 
+        public static void altaAfiliado(Afiliado afiliado) { 
         String connectionString = Configuracion.STRING_DE_CONEXION_IVAN;
-        String result = "UNSuccessful";
+        //String result = "UNSuccessful";
         SqlConnection conn = new SqlConnection(connectionString);
             try
             {
@@ -26,7 +26,7 @@ namespace ObraSocialNegocio.ADO
             }
             catch (Exception e)
             {
-                result = e.Message;
+                throw new Exception(e.Message);
             }
             conn.Close();
 
