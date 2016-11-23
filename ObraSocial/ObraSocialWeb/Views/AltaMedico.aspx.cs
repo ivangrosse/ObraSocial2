@@ -1,4 +1,5 @@
 ﻿using ObraSocialNegocio.Modelo;
+using ObraSocialWeb.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace ObraSocialWeb.Vista
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        MedicController controlador = new MedicController();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -36,6 +38,8 @@ namespace ObraSocialWeb.Vista
             medico.Matricula = Int32.Parse(txtMatricula.Text);
             medico.Cuenta.Numero = cuenta.Numero;
             medico.Especialidad.Descripcion = especialidad.Descripcion;
+
+            controlador.AltaMedico(medico);
         }
     }
 }
