@@ -8,22 +8,53 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ObraSocialDesktop.Properties
-{
-
-
+namespace ObraSocialDesktop.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Ivan\\AppData\\Local\\" +
+            "Microsoft\\Microsoft SQL Server Local DB\\Instances\\MSSQLLocalDB\\ObraSocial.ldf.md" +
+            "f\";Integrated Security=True;Connect Timeout=30")]
+        public string ObraSocial_ldfConnectionString {
+            get {
+                return ((string)(this["ObraSocial_ldfConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Ivan\\AppData\\Local\\" +
+            "Microsoft\\Microsoft SQL Server Local DB\\Instances\\MSSQLLocalDB\\ObraSocial.mdf\";I" +
+            "ntegrated Security=True;Connect Timeout=30")]
+        public string ObraSocialConnectionString {
+            get {
+                return ((string)(this["ObraSocialConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\OBRASOCIAL.MD" +
+            "F;Integrated Security=True;Connect Timeout=30")]
+        public string OBRASOCIALConnectionString1 {
+            get {
+                return ((string)(this["OBRASOCIALConnectionString1"]));
             }
         }
     }
