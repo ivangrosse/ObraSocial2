@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObraSocialNegocio.Modelo
 {
-    class Consulta
+    public class Consulta
     {
         private int id;
         private DateTime fecha;
