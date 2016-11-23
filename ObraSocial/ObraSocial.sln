@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObraSocialDesktop", "ObraSocialDesktop\ObraSocialDesktop.csproj", "{1EE4EDBB-974C-4008-87BA-56819A3F624C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1F3A39D4-4FAC-421C-AA78-28D1E2318BFF} = {1F3A39D4-4FAC-421C-AA78-28D1E2318BFF}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObraSocialNegocio", "ObraSocialNegocio\ObraSocialNegocio.csproj", "{7FED0451-2375-4B1A-8DCD-42AB213BEBDB}"
 EndProject
