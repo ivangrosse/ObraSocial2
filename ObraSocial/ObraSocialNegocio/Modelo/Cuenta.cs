@@ -22,5 +22,16 @@ namespace ObraSocialNegocio.Modelo
                 return numero;
             }
         }
+
+        public String Banco {
+            set
+            {
+                banco = value;
+            }
+            get
+            {
+                return banco;
+            }
+        }
     }
 }

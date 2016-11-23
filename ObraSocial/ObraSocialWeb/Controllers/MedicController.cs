@@ -1,4 +1,5 @@
-﻿using ObraSocialNegocio.Modelo;
+﻿using ObraSocialNegocio.ADO;
+using ObraSocialNegocio.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,11 @@ namespace ObraSocialWeb.Controllers
 {
     public class MedicController
     {
-        public void AltaMedico(Medico medico)
+        
+        public void AltaMedico(Medico medico, Cuenta cuenta)
         {
-            
+            MedicoADO insert = new MedicoADO();
+            insert.altaMedico(medico, cuenta);
         }
     }
 }
