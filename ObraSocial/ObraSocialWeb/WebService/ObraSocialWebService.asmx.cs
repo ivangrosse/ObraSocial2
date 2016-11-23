@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ObraSocialNegocio.Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,9 +18,16 @@ namespace ObraSocialWeb.WebService
     public class ObraSocialWebService : System.Web.Services.WebService
     {
         [WebMethod]
-        public string HelloWorld1()
+        public string validarAfiliado(int nroAfiliado)
         {
-            return "Hello World 1";
+
+            Afiliado afiliado = new Afiliado();
+            afiliado = ObraSocialNegocio.ADO.AfiliadoADO.buscarAfiliado(nroAfiliado);
+            if(afiliado == null)
+            {
+                return "No se encontro el afiliado";
+            }
+            return afiliado.Nombre +" "+ afiliado.Apellido + " es afiliado";
         }
 
         [WebMethod]

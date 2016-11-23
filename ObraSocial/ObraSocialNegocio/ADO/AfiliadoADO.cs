@@ -31,5 +31,36 @@ namespace ObraSocialNegocio.ADO
             conn.Close();
 
         }
+
+        public static Afiliado buscarAfiliado(int nroAfiliado)
+        {
+            Afiliado a = new Afiliado();
+            String connectionString = Configuracion.STRING_DE_CONEXION_IVAN;
+            SqlConnection conn = new SqlConnection(connectionString);
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("", conn);
+                cmd.CommandText = "SELECT * from AFILIADO where numero = " + nroAfiliado;
+                SqlDataReader read = cmd.ExecuteReader();
+                if (read.HasRows)
+                {
+                    while (read.Read())
+                    {
+                        a.Dni = Int32.Parse(read.GetValue(1).ToString());
+                        a.Nombre = read.GetSqlValue(2).ToString();
+                        a.Apellido = read.GetValue(3).ToString();
+                    }
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            conn.Close();
+            return a;
+        }
     }
 }
