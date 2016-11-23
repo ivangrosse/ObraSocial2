@@ -35,6 +35,9 @@ namespace ObraSocialDesktop.Vista
             {
                 MessageBox.Show("No se pudo grabar el afiliado" + ex.Message);
             }
+
+            GestionarAfiliado gestion = new GestionarAfiliado();
+            gestion.Show();
             
         }
 

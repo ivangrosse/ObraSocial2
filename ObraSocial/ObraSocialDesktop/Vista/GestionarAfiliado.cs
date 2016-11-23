@@ -35,6 +35,7 @@ namespace ObraSocialDesktop.Vista
 
             AgregarAfiliado ventana = new AgregarAfiliado();
             ventana.Show();
+            this.Close();
 
         }
 
