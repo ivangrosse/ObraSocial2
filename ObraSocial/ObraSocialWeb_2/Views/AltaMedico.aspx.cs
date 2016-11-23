@@ -32,7 +32,6 @@ namespace ObraSocialWeb_2.Views
             medico.Nombre = txtNombre.Text;
             medico.Apellido = txtApellido.Text;
             medico.Dni = Int32.Parse(txtDni.Text);
-            medico.Matricula = Int32.Parse(txtMatricula.Text);
             medico.Cuenta = cuenta;
             medico.Especialidad = especialidad;
             medico.Direccion = txtDireccion.Text;
@@ -43,7 +42,6 @@ namespace ObraSocialWeb_2.Views
             } catch(Exception ex)
             {
                 Console.WriteLine(ex);
-                txtArea.Text = ex.Message;
                 
             }
         }

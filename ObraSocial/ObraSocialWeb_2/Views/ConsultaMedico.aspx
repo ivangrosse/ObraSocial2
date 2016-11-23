@@ -13,25 +13,20 @@
         <h1>Listado de médicos</h1>
         <hr />
         <div>
-        
-            <table style="width:100%;">
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Matrícula Prof.</th>
-                    <th>Especialidad</th>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-            </table>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+                <Columns>
+                    <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
+                    <asp:BoundField DataField="descripcion" HeaderText="descripcion" SortExpression="descripcion" />
+                </Columns>
+            </asp:GridView>
+            
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ObraSocialConnectionString %>" SelectCommand="SELECT MEDICO.nombre, ESPECIALIDAD.descripcion FROM ESPECIALIDAD INNER JOIN MEDICO ON ESPECIALIDAD.id_especialidad = MEDICO.id_especialidad"></asp:SqlDataSource>
+            
         </div>
         <a href="Default.aspx">Volver al inicio.</a>
     
     </div>
+        
     </form>
 </body>
 </html>

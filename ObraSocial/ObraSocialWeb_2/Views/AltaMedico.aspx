@@ -23,8 +23,6 @@
         <asp:TextBox ID="txtApellido" runat="server"></asp:TextBox></br></br>
         <label>DNI:</label>
         <asp:TextBox ID="txtDni" runat="server"></asp:TextBox></br></br>
-        <label>Matrícula Profesional:</label>
-        <asp:TextBox ID="txtMatricula" runat="server"></asp:TextBox></br></br>
         <label>Número de cuenta:</label>
         <asp:TextBox ID="txtCuenta" runat="server"></asp:TextBox></br></br>
         <label>Banco:</label>
@@ -37,7 +35,6 @@
         <p>
         <asp:Button ID="btnAltaMedico" runat="server" Text="Suscribir Médico" OnClick="btnAltaMedico_Click" />
         </p>
-        <asp:TextBox ID="txtArea" runat="server" OnTextChanged="txtDireccion_TextChanged"></asp:TextBox>
     </form>
     <a href="Default.aspx">Volver al inicio.</a>
 

@@ -18,7 +18,7 @@
             <br />
             <br />
             <br />
-            <a href="ConsultarMedico.aspx">Listado de Médicos.</a>
+            <a href="ConsultaMedico.aspx">Listado de Médicos.</a>
         </div>
     </div>
     </form>
