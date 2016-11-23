@@ -24,8 +24,8 @@ namespace ObraSocialDesktop.Vista
 
         private void GestionarAfiliado_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'obraSocialDataSet.AFILIADO' table. You can move, or remove it, as needed.
-            this.aFILIADOTableAdapter.Fill(this.obraSocialDataSet.AFILIADO);
+            // TODO: This line of code loads data into the 'dataSetAfiliados.AFILIADO' table. You can move, or remove it, as needed.
+            this.aFILIADOTableAdapter.Fill(this.dataSetAfiliados.AFILIADO);
 
         }
 

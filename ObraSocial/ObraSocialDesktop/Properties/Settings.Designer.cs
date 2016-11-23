@@ -57,5 +57,16 @@ namespace ObraSocialDesktop.Properties {
                 return ((string)(this["OBRASOCIALConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\ASUS\\Documents\\ObraS" +
+            "ocial.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string ObraSocialDataSetConnectionString {
+            get {
+                return ((string)(this["ObraSocialDataSetConnectionString"]));
+            }
+        }
     }
 }

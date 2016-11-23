@@ -61,6 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetAfiliados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetAfiliados.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ObraSocialDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -104,6 +109,17 @@
     <EmbeddedResource Include="Vista\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSetAfiliados.xsc">
+      <DependentUpon>DataSetAfiliados.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetAfiliados.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAfiliados.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetAfiliados.xss">
+      <DependentUpon>DataSetAfiliados.xsd</DependentUpon>
+    </None>
     <None Include="ObraSocialDataSet.xsc">
       <DependentUpon>ObraSocialDataSet.xsd</DependentUpon>
     </None>

@@ -34,15 +34,15 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.obraSocialDataSet = new ObraSocialDesktop.ObraSocialDataSet();
+            this.dataSetAfiliados = new ObraSocialDesktop.DataSetAfiliados();
             this.aFILIADOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aFILIADOTableAdapter = new ObraSocialDesktop.ObraSocialDataSetTableAdapters.AFILIADOTableAdapter();
+            this.aFILIADOTableAdapter = new ObraSocialDesktop.DataSetAfiliadosTableAdapters.AFILIADOTableAdapter();
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obraSocialDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetAfiliados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFILIADOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,20 +95,20 @@
             this.nombreDataGridViewTextBoxColumn,
             this.apellidoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.aFILIADOBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(52, 89);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 73);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(456, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(469, 187);
             this.dataGridView1.TabIndex = 6;
             // 
-            // obraSocialDataSet
+            // dataSetAfiliados
             // 
-            this.obraSocialDataSet.DataSetName = "ObraSocialDataSet";
-            this.obraSocialDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataSetAfiliados.DataSetName = "DataSetAfiliados";
+            this.dataSetAfiliados.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aFILIADOBindingSource
             // 
             this.aFILIADOBindingSource.DataMember = "AFILIADO";
-            this.aFILIADOBindingSource.DataSource = this.obraSocialDataSet;
+            this.aFILIADOBindingSource.DataSource = this.dataSetAfiliados;
             // 
             // aFILIADOTableAdapter
             // 
@@ -117,26 +117,26 @@
             // numeroDataGridViewTextBoxColumn
             // 
             this.numeroDataGridViewTextBoxColumn.DataPropertyName = "numero";
-            this.numeroDataGridViewTextBoxColumn.HeaderText = "Número";
+            this.numeroDataGridViewTextBoxColumn.HeaderText = "numero";
             this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
             this.numeroDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dniDataGridViewTextBoxColumn
             // 
             this.dniDataGridViewTextBoxColumn.DataPropertyName = "dni";
-            this.dniDataGridViewTextBoxColumn.HeaderText = "DNI";
+            this.dniDataGridViewTextBoxColumn.HeaderText = "dni";
             this.dniDataGridViewTextBoxColumn.Name = "dniDataGridViewTextBoxColumn";
             // 
             // nombreDataGridViewTextBoxColumn
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
             // 
             // apellidoDataGridViewTextBoxColumn
             // 
             this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.HeaderText = "apellido";
             this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
             // 
             // GestionarAfiliado
@@ -153,7 +153,7 @@
             this.Text = "GestionarAfiliado";
             this.Load += new System.EventHandler(this.GestionarAfiliado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obraSocialDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetAfiliados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFILIADOBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -166,9 +166,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private ObraSocialDataSet obraSocialDataSet;
+        private DataSetAfiliados dataSetAfiliados;
         private System.Windows.Forms.BindingSource aFILIADOBindingSource;
-        private ObraSocialDataSetTableAdapters.AFILIADOTableAdapter aFILIADOTableAdapter;
+        private DataSetAfiliadosTableAdapters.AFILIADOTableAdapter aFILIADOTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn numeroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dniDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
